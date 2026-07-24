@@ -260,11 +260,19 @@
   }
   .step{
     display:flex;
+    align-items:center;
     gap:14px;
-    padding:14px 0;
-    border-bottom:1px solid #EFE6D6;
+    padding:12px 26px 12px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
   }
-  .step:last-child{border-bottom:none;}
+  .step:last-child{margin-bottom:0;}
+  #stappen .step:nth-of-type(1){background:var(--rose);}
+  #stappen .step:nth-of-type(2){background:var(--orange);}
+  #stappen .step:nth-of-type(3){background:var(--maroon-deep);}
+  #stappen .step:nth-of-type(4){background:var(--rose-mid);}
+  #stappen .step:nth-of-type(5){background:var(--rose);}
+  #stappen .step:nth-of-type(6){background:var(--orange);}
   .step-num{
     flex:0 0 auto;
     width:34px;
@@ -281,10 +289,11 @@
   }
   .step-thumb{
     flex:0 0 auto;
-    width:48px;
-    height:48px;
-    border-radius:12px;
-    background:var(--cream-2);
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#FFFFFF;
+    box-shadow:0 2px 6px rgba(122,32,54,0.12);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -299,13 +308,13 @@
     font-family:'Poppins', sans-serif;
     font-weight:600;
     font-size:15px;
-    color:var(--title-color);
+    color:#FFFFFF;
     margin:0 0 4px;
   }
   .step p{
     margin:0;
     font-size:14.5px;
-    color:var(--ink-soft);
+    color:rgba(255,255,255,0.92);
   }
   /* FOOTER */
   footer{
@@ -401,7 +410,7 @@
     <h2 class="section-title" style="text-align:center; font-size:clamp(24px, 5vw, 30px);">Praktisch</h2>
     <ul class="practical-list">
       <li><span class="ic">📅</span><span>Zaterdag <strong>1 augustus</strong> of <strong>22 augustus</strong></span></li>
-      <li><span class="ic">🕙</span><span>Welkom vanaf <strong>9u45</strong>, we starten om <strong>10u tot 11u30</strong></span></li>
+      <li><span class="ic">🕙</span><span>Welkom vanaf <strong>9u45</strong> - we starten om <strong>10u tot 11u30</strong></span></li>
       <li><span class="ic">📍</span><span>Beukenlaan 83, 2980 Zoersel</span></li>
       <li><span class="ic">👥</span><span>We houden het klein: <strong>max. 6 kindjes</strong></span></li>
       <li><span class="ic">💶</span><span>Gratis</span></li>
@@ -453,8 +462,6 @@
       <div class="step-thumb"><img src="assets/step6-babbel.png" alt="Alohi-mascotte bij het positieve babbeltje"></div>
       <div><h4>Positief babbeltje</h4><p>We staan stil bij gevoelens en talenten, op een creatieve manier, zodat kinderen met meer vertrouwen verder kunnen.</p></div>
     </div>
-
-    <img class="owls-img" src="assets/owls-row.png" alt="De zes Alohi-mascottes nog eens naast elkaar" style="margin-top:20px; max-width:340px; margin-left:auto; margin-right:auto;">
   </div>
 </section>
 
