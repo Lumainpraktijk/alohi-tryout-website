@@ -9,19 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream: #FFF1F1;
-    --cream-2: #FAEEDC;
-    --teal-deep: #0B4A3C;
-    --title-color: #D1525B;
-    --teal: #0F6E56;
-    --teal-mid: #1D9E75;
-    --teal-light: #9FE1CB;
-    --coral: #E8875F;
-    --cta-color: #E39B29;
-    --pink: #E67FA0;
+    --cream: #FFFFE5;
+    --cream-2: #EFE6C8;
+    --maroon-deep: #7A2036;
+    --title-color: #C13349;
+    --rose: #C13349;
+    --rose-mid: #E17F95;
+    --rose-light: #F5C9D6;
+    --orange: #E8933A;
+    --cta-color: #E8933A;
+    --pink: #E17F95;
     --pink-light: #FBEAF0;
-    --ink: #2C2C2A;
-    --ink-soft: #5F5E5A;
+    --ink: #3A2A28;
+    --ink-soft: #6B5B52;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -43,7 +43,7 @@
     font-family:'Caveat', cursive;
     font-weight:700;
   }
-  a{color:var(--teal);}
+  a{color:var(--rose);}
   .wrap{
     max-width:640px;
     margin:0 auto;
@@ -58,7 +58,7 @@
     padding:40px 0 32px;
     text-align:center;
     overflow:hidden;
-    background:linear-gradient(120deg, #FDF3DE 0%, #FDF6EC 38%, #E9F4F1 100%);
+    background:#FFFFFF;
   }
   @media (min-width:600px){
     .hero{padding:64px 0 44px;}
@@ -69,18 +69,18 @@
     top:38%;
     width:116%;
     height:120px;
-    background:linear-gradient(90deg, #F6C9AE 0%, #F0997B 45%, #BFE3DD 100%);
+    background:linear-gradient(90deg, #F6C9AE 0%, #F0997B 45%, #F0AEC0 100%);
     opacity:.55;
     transform:rotate(-6deg);
     border-radius:100px;
     z-index:0;
   }
-  .dot{position:absolute; border-radius:50%; background:var(--teal-mid); opacity:.35; z-index:0;}
+  .dot{position:absolute; border-radius:50%; background:var(--rose-mid); opacity:.35; z-index:0;}
   .star{position:absolute; z-index:0; color:#F4C94B; opacity:.9;}
   .hero-inner{position:relative; z-index:1;}
   .logo-word{
     font-size:68px;
-    color:var(--teal);
+    color:var(--rose);
     line-height:1;
     display:inline-block;
   }
@@ -88,7 +88,7 @@
     font-size:14px;
     letter-spacing:.06em;
     text-transform:uppercase;
-    color:var(--coral);
+    color:var(--orange);
     font-weight:700;
     margin:10px 0 18px;
   }
@@ -126,7 +126,7 @@
     background:#FFFDFA;
     border-radius:18px;
     padding:22px 18px;
-    box-shadow:0 2px 0 rgba(15,110,86,0.06);
+    box-shadow:0 2px 0 rgba(122,32,54,0.08);
     border:1px solid #F2E5D3;
   }
   @media (min-width:600px){
@@ -151,7 +151,7 @@
     font-size:18px;
     line-height:1.5;
   }
-  .practical-list strong{color:var(--teal-deep);}
+  .practical-list strong{color:var(--maroon-deep);}
   /* CTA BUTTON */
   .cta{
     display:block;
@@ -163,7 +163,7 @@
     text-decoration:none;
     padding:15px 30px;
     border-radius:999px;
-    box-shadow:0 4px 0 #A9740F;
+    box-shadow:0 4px 0 #B5701E;
     transition:transform .12s ease;
     text-align:center;
   }
@@ -192,7 +192,7 @@
     border-radius:18px;
     padding:22px 22px;
     margin-bottom:0;
-    border-left:6px solid var(--teal-mid);
+    border-left:6px solid var(--rose-mid);
   }
   .theme-thumb{
     width:50%;
@@ -201,7 +201,7 @@
     aspect-ratio:4/5;
     border-radius:12px;
     margin-bottom:14px;
-    background:linear-gradient(135deg, #F6C9AE 0%, #BFE3DD 100%);
+    background:linear-gradient(135deg, #F6C9AE 0%, #F0AEC0 100%);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -219,7 +219,7 @@
   .theme-card .date{
     font-size:13px;
     font-weight:700;
-    color:var(--teal);
+    color:var(--rose);
     text-transform:uppercase;
     letter-spacing:.04em;
   }
@@ -234,7 +234,7 @@
     font-size:14.5px;
     color:var(--ink-soft);
   }
-  .theme-card em{color:var(--teal-deep); font-style:normal; font-weight:700;}
+  .theme-card em{color:var(--maroon-deep); font-style:normal; font-weight:700;}
   /* WAT IS ALOHI */
   .about p{font-size:15.5px;}
   .about a.site{
@@ -267,8 +267,8 @@
     width:34px;
     height:34px;
     border-radius:50%;
-    background:var(--teal-light);
-    color:var(--teal-deep);
+    background:var(--rose-light);
+    color:var(--maroon-deep);
     font-family:'Poppins', sans-serif;
     font-weight:600;
     display:flex;
@@ -306,13 +306,33 @@
   }
   /* FOOTER */
   footer{
+    position:relative;
     text-align:center;
-    padding:24px 20px;
+    padding:90px 20px 28px;
     margin-top:20px;
-    background:var(--teal-deep);
-    color:#EAF5F0;
+    background:var(--cream-2);
+    color:#F7ECD9;
     font-size:13px;
     width:100%;
+    overflow:hidden;
+  }
+  @media (min-width:600px){
+    footer{padding:120px 20px 32px;}
+  }
+  .footer-waves{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    line-height:0;
+  }
+  .footer-waves svg{
+    width:100%;
+    height:100%;
+    display:block;
+  }
+  .footer-text{
+    position:relative;
+    z-index:1;
   }
 </style>
 </head>
@@ -336,14 +356,14 @@
     </div>
 
     <div class="theme-grid" style="margin-top:40px;">
-      <div class="theme-card" style="border-left-color:#D3107A;">
+      <div class="theme-card" style="border-left-color:#C13349;">
         <div class="theme-thumb"><img src="assets/gekkie-de-gekko.png" alt="Cover van het prentenboek Gekkie de Gekko"></div>
         <p class="date">Zaterdag 1 augustus</p>
         <h3>📖 Samen sterk</h3>
         <p>Gebaseerd op het prentenboek <em>Gekkie de Gekko</em>. Gekkie de Gekko droomt groot. Maar op weg naar de top leert hij een verrassende les over zichzelf.</p>
       </div>
 
-      <div class="theme-card" style="border-left-color:#F6CB25;">
+      <div class="theme-card" style="border-left-color:#E8933A;">
         <div class="theme-thumb"><img src="assets/de-leeuw-in-de-muis.png" alt="Cover van het prentenboek De leeuw in de muis"></div>
         <p class="date">Zaterdag 22 augustus</p>
         <h3>📖 Groeien in vertrouwen</h3>
@@ -416,7 +436,16 @@
 </section>
 
 <footer>
-  Alohi try-out &middot; Valerie, mama van Céline &middot; Beukenlaan 83, 2980 Zoersel
+  <div class="footer-waves">
+    <svg viewBox="0 0 1440 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L190,0 C150,55 195,110 130,145 C75,175 20,155 0,140 Z" fill="#E8933A"/>
+      <path d="M1440,0 L1250,0 C1290,55 1245,110 1310,145 C1365,175 1420,155 1440,140 Z" fill="#E8933A"/>
+      <path d="M0,90 C300,20 500,160 800,90 C1050,30 1250,150 1440,80 L1440,260 L0,260 Z" fill="#F0AEC0"/>
+      <path d="M0,130 C300,60 500,200 800,130 C1050,70 1250,190 1440,120 L1440,260 L0,260 Z" fill="#E17F95"/>
+      <path d="M0,170 C300,100 500,240 800,170 C1050,110 1250,230 1440,160 L1440,260 L0,260 Z" fill="#7A2036"/>
+    </svg>
+  </div>
+  <div class="footer-text">Alohi try-out &middot; Valerie, mama van Céline &middot; Beukenlaan 83, 2980 Zoersel</div>
 </footer>
 
 </body>
