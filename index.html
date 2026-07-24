@@ -337,12 +337,31 @@
     position:relative;
     z-index:1;
   }
+  /* SCROLL REVEAL */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .theme-grid .reveal:nth-of-type(2){transition-delay:.12s;}
+  #stappen .step.reveal:nth-of-type(2){transition-delay:.05s;}
+  #stappen .step.reveal:nth-of-type(3){transition-delay:.1s;}
+  #stappen .step.reveal:nth-of-type(4){transition-delay:.15s;}
+  #stappen .step.reveal:nth-of-type(5){transition-delay:.2s;}
+  #stappen .step.reveal:nth-of-type(6){transition-delay:.25s;}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="wrap hero-inner">
+  <div class="wrap hero-inner reveal">
     <img src="assets/alohi-logo.png" alt="Alohi logo" style="width:220px; max-width:65%; height:auto; margin-bottom:16px;">
     <h1>Een beweeg- en ontspanningsavontuur<br>voor jouw kindje</h1>
     <p class="lede">Hoi, ik ben Valerie, mama van Céline! Naast mijn opleiding tot kinder- en jongerentherapeut die ik momenteel volg, ben ik onlangs gecertifieerd als Alohi-trainer.</p>
@@ -355,18 +374,18 @@
     <h2 class="section-title" style="text-align:center; font-size:clamp(24px, 5vw, 30px); line-height:1.1;">Twee momenten<br><span class="script" style="font-size:1.3em; font-weight:400; color:#DB7A85; display:inline-block; margin-top:-4px;">elk met een eigen thema</span></h2>
 
     <div class="cta-wrap">
-      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
+      <a class="cta" href="#" target="_blank" rel="noopener">Gratis inschrijven →</a>
     </div>
 
     <div class="theme-grid" style="margin-top:40px;">
-      <div class="theme-card" style="background:#FFD4E1; border:2px solid #C13349; box-shadow:0 6px 16px rgba(122,32,54,0.14);">
+      <div class="theme-card reveal" style="background:#FFD4E1; border:2px solid #C13349; box-shadow:0 6px 16px rgba(122,32,54,0.14);">
         <div class="theme-thumb"><img src="assets/gekkie-de-gekko.png" alt="Cover van het prentenboek Gekkie de Gekko"></div>
         <h3>📖 Samen sterk</h3>
         <p class="date">Zaterdag 1 augustus</p>
         <p>Gebaseerd op het prentenboek <em>Gekkie de Gekko</em>. Gekkie de Gekko droomt groot. Maar op weg naar de top leert hij een verrassende les over zichzelf.</p>
       </div>
 
-      <div class="theme-card" style="background:#F0E7C8; border:2px solid #E8933A; box-shadow:0 6px 16px rgba(122,32,54,0.14);">
+      <div class="theme-card reveal" style="background:#F0E7C8; border:2px solid #E8933A; box-shadow:0 6px 16px rgba(122,32,54,0.14);">
         <div class="theme-thumb"><img src="assets/de-leeuw-in-de-muis.png" alt="Cover van het prentenboek De leeuw in de muis"></div>
         <h3>📖 Groeien in vertrouwen</h3>
         <p class="date">Zaterdag 22 augustus</p>
@@ -377,7 +396,7 @@
 </section>
 
 <section id="praktisch">
-  <div class="wrap card">
+  <div class="wrap card reveal">
     <h2 class="section-title" style="text-align:center; font-size:clamp(24px, 5vw, 30px);">Praktisch</h2>
     <ul class="practical-list">
       <li><span class="ic">📅</span><span>Zaterdag <strong>1 augustus</strong> of <strong>22 augustus</strong></span></li>
@@ -390,14 +409,14 @@
       <li><span class="ic">✅</span><span>Inschrijven is verplicht</span></li>
     </ul>
     <div class="cta-wrap">
-      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
+      <a class="cta" href="#" target="_blank" rel="noopener">Gratis inschrijven →</a>
       <p class="cta-note">Plaatsen zijn beperkt tot 6 kindjes per sessie, schrijf je kind snel in.</p>
     </div>
   </div>
 </section>
 
 <section id="wat-is-alohi">
-  <div class="wrap card about">
+  <div class="wrap card about reveal">
     <h2 class="section-title">Wat is Alohi?</h2>
     <p>Alohi is een 6-stappenmethode, ontwikkeld door Els Lambrechts en Lore Coppens, die kinderen op een speelse, creatieve en lichaamsgerichte manier helpt ontspannen, verbinden en veerkrachtiger worden.</p>
     <a class="site" href="https://www.alohi.be/" target="_blank" rel="noopener">www.alohi.be →</a>
@@ -409,27 +428,27 @@
     <h2 class="section-title">De 6 stappen</h2>
     <p class="steps-intro">Tijdens een Alohi-lesje gaan we samen op beweeg- en ontspanningsavontuur, en doorlopen we aan de hand van een thema deze 6 stappen:</p>
 
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step1-ontladen.png" alt="Alohi-mascotte bij ontladen"></div>
       <div><h4>Ontladen</h4><p>We gaan onze energie kwijtspelen op een speelse manier. Lachen, spelen, dansen, zingen.</p></div>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step2-yoga.png" alt="Alohi-mascotte bij yoga"></div>
       <div><h4>Yoga</h4><p>Binnen de Alohi-context is kinderyoga een moment van speelsheid en verbinding, met je eigen lichaam, tussen lichaam en brein, en met elkaar.</p></div>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step3-massage.png" alt="Alohi-mascotte bij massage"></div>
       <div><h4>Massage</h4><p>Deze stap bestaat uit het masseren van je eigen lichaam (hoofd, voorkant lichaam, armen, benen) of elkaars lichaam, aan de hand van een verhaaltje.</p></div>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step4-ademhaling.png" alt="Alohi-mascotte bij ademhaling"></div>
       <div><h4>Ademhaling</h4><p>Met speelse ademhalingsoefeningetjes moedigen we kinderen aan om goed te ademen en zich bewust te worden van hun adem.</p></div>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step5-mindfulness.png" alt="Alohi-mascotte bij mindfulness"></div>
       <div><h4>Mindfulness</h4><p>We vertragen even en komen, op basis van een verhaaltje, met al onze zintuigen aanwezig in het hier en nu.</p></div>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <div class="step-thumb"><img src="assets/step6-babbel.png" alt="Alohi-mascotte bij het positieve babbeltje"></div>
       <div><h4>Positief babbeltje</h4><p>We staan stil bij gevoelens en talenten, op een creatieve manier, zodat kinderen met meer vertrouwen verder kunnen.</p></div>
     </div>
@@ -450,6 +469,27 @@
   </div>
   <div class="footer-text">Alohi try-out &middot; Valerie, mama van Céline &middot; Beukenlaan 83, 2980 Zoersel</div>
 </footer>
+
+<script>
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('is-visible');
+    });
+  }
+</script>
 
 </body>
 </html>
