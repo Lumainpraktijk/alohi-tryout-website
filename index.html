@@ -6,7 +6,7 @@
 <title>Alohi try-out | Valerie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream: #FFF1F1;
@@ -106,6 +106,9 @@
     color:var(--ink-soft);
     max-width:480px;
     margin:0 auto;
+  }
+  .hero p.lede + p.lede{
+    margin-top:16px;
   }
   /* SECTION generic */
   section{padding:28px 0;}
@@ -236,6 +239,7 @@
     display:inline-block;
     margin-top:10px;
     font-weight:700;
+    color:var(--cta-color);
   }
   /* 6 STEPS */
   .owls-img{
@@ -301,9 +305,12 @@
   /* FOOTER */
   footer{
     text-align:center;
-    padding:32px 20px 48px;
-    color:var(--ink-soft);
+    padding:24px 20px;
+    margin-top:20px;
+    background:var(--teal-deep);
+    color:#EAF5F0;
     font-size:13px;
+    width:100%;
   }
 </style>
 </head>
@@ -312,33 +319,34 @@
 <div class="hero">
   <div class="wrap hero-inner">
     <img src="assets/alohi-logo.png" alt="Alohi logo" style="width:220px; max-width:65%; height:auto; margin-bottom:16px;">
-    <h1>Een beweeg- en ontspanningsavontuur voor jouw kindje</h1>
-    <p class="lede">Hoi, ik ben Valerie, mama van Céline! Naast mijn opleiding tot kinder- en jongerentherapeut die ik momenteel volg, ben ik onlangs gecertifieerd als Alohi-trainer. Als startende Alohi-trainer organiseer ik graag een paar <strong>gratis try-out sessies</strong>, om dit in de praktijk te ervaren en waardevolle feedback te ontvangen.</p>
+    <h1>Een beweeg- en ontspanningsavontuur<br>voor jouw kindje</h1>
+    <p class="lede">Hoi, ik ben Valerie, mama van Céline! Naast mijn opleiding tot kinder- en jongerentherapeut die ik momenteel volg, ben ik onlangs gecertifieerd als Alohi-trainer.</p>
+    <p class="lede">Als startende Alohi-trainer organiseer ik graag een paar<br><strong>gratis oefensessies</strong>, om dit in de praktijk te ervaren en waardevolle feedback te ontvangen.</p>
   </div>
 </div>
 
 <section id="themas">
   <div class="wrap">
-    <h2 class="section-title" style="text-align:center;">Twee momenten, elk met een eigen thema</h2>
+    <h2 class="section-title" style="text-align:center; font-size:clamp(24px, 5vw, 30px); line-height:1.1;">Twee momenten<br><span class="script" style="font-size:1.3em; font-weight:400; color:#DB7A85; display:inline-block; margin-top:-4px;">elk met een eigen thema</span></h2>
 
-    <div class="theme-grid">
+    <div class="cta-wrap">
+      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
+    </div>
+
+    <div class="theme-grid" style="margin-top:40px;">
       <div class="theme-card" style="border-left-color:#D3107A;">
         <div class="theme-thumb"><img src="assets/gekkie-de-gekko.png" alt="Cover van het prentenboek Gekkie de Gekko"></div>
         <p class="date">Zaterdag 1 augustus</p>
-        <h3>📖 "Samen sterk"</h3>
+        <h3>📖 Samen sterk</h3>
         <p>Gebaseerd op het prentenboek <em>Gekkie de Gekko</em>. Gekkie de Gekko droomt groot. Maar op weg naar de top leert hij een verrassende les over zichzelf.</p>
       </div>
 
       <div class="theme-card" style="border-left-color:#F6CB25;">
         <div class="theme-thumb"><img src="assets/de-leeuw-in-de-muis.png" alt="Cover van het prentenboek De leeuw in de muis"></div>
         <p class="date">Zaterdag 22 augustus</p>
-        <h3>📖 "Groeien in vertrouwen"</h3>
+        <h3>📖 Groeien in vertrouwen</h3>
         <p>Gebaseerd op het prentenboek <em>De leeuw in de muis</em>. Het gaat over een onopvallende muis die opkijkt tegen de leeuw.</p>
       </div>
-    </div>
-
-    <div class="cta-wrap">
-      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
     </div>
   </div>
 </section>
@@ -348,14 +356,13 @@
     <h2 class="section-title">Praktisch</h2>
     <ul class="practical-list">
       <li><span class="ic">📅</span><span>Zaterdag <strong>1</strong> of <strong>22 augustus</strong></span></li>
-      <li><span class="ic">🕙</span><span>Aankomst om <strong>9u45</strong>, sessie van <strong>10u tot 11u30</strong></span></li>
+      <li><span class="ic">🕙</span><span>Welkom vanaf <strong>9u45</strong>, we starten om <strong>10u tot 11u30</strong></span></li>
       <li><span class="ic">📍</span><span>Beukenlaan 83, 2980 Zoersel</span></li>
-      <li><span class="ic">👦👧</span><span>Voor kindjes van <strong>4 tot 6 jaar</strong></span></li>
       <li><span class="ic">👥</span><span>We houden het klein: <strong>max. 6 kindjes</strong> per sessie</span></li>
       <li><span class="ic">💶</span><span>Gratis</span></li>
-      <li><span class="ic">👕</span><span>Comfortabele kleding aandoen</span></li>
+      <li><span class="ic">👕</span><span>Comfortabele kleding</span></li>
       <li><span class="ic">📷</span><span>Er worden geen foto's of filmpjes gemaakt tijdens de sessie</span></li>
-      <li><span class="ic">✅</span><span><strong>Inschrijven is verplicht</strong></span></li>
+      <li><span class="ic">✅</span><span>Inschrijven is verplicht</span></li>
     </ul>
     <div class="cta-wrap">
       <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
