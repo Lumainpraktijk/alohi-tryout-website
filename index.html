@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alohi try-out | Valerie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #FFF1F1;
+    --cream-2: #FAEEDC;
+    --teal-deep: #0B4A3C;
+    --title-color: #D1525B;
+    --teal: #0F6E56;
+    --teal-mid: #1D9E75;
+    --teal-light: #9FE1CB;
+    --coral: #E8875F;
+    --cta-color: #E39B29;
+    --pink: #E67FA0;
+    --pink-light: #FBEAF0;
+    --ink: #2C2C2A;
+    --ink-soft: #5F5E5A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Quicksand', sans-serif;
+    font-weight:500;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    color:var(--title-color);
+    margin:0;
+  }
+  .script{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+  }
+  a{color:var(--teal);}
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:0 18px;
+  }
+  @media (min-width:600px){
+    .wrap{padding:0 24px;}
+  }
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:40px 0 32px;
+    text-align:center;
+    overflow:hidden;
+    background:linear-gradient(120deg, #FDF3DE 0%, #FDF6EC 38%, #E9F4F1 100%);
+  }
+  @media (min-width:600px){
+    .hero{padding:64px 0 44px;}
+  }
+  .swoosh{
+    position:absolute;
+    left:-8%;
+    top:38%;
+    width:116%;
+    height:120px;
+    background:linear-gradient(90deg, #F6C9AE 0%, #F0997B 45%, #BFE3DD 100%);
+    opacity:.55;
+    transform:rotate(-6deg);
+    border-radius:100px;
+    z-index:0;
+  }
+  .dot{position:absolute; border-radius:50%; background:var(--teal-mid); opacity:.35; z-index:0;}
+  .star{position:absolute; z-index:0; color:#F4C94B; opacity:.9;}
+  .hero-inner{position:relative; z-index:1;}
+  .logo-word{
+    font-size:68px;
+    color:var(--teal);
+    line-height:1;
+    display:inline-block;
+  }
+  .eyebrow{
+    font-size:14px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--coral);
+    font-weight:700;
+    margin:10px 0 18px;
+  }
+  .hero h1{
+    font-size:22px;
+    line-height:1.3;
+    margin-bottom:12px;
+  }
+  @media (min-width:600px){
+    .hero h1{font-size:26px; margin-bottom:14px;}
+  }
+  .hero svg.star-svg{position:absolute; z-index:0;}
+  .hero p.lede{
+    font-size:16px;
+    color:var(--ink-soft);
+    max-width:480px;
+    margin:0 auto;
+  }
+  /* SECTION generic */
+  section{padding:28px 0;}
+  @media (min-width:600px){
+    section{padding:36px 0;}
+  }
+  .section-title{
+    font-size:19px;
+    margin-bottom:14px;
+  }
+  @media (min-width:600px){
+    .section-title{font-size:20px; margin-bottom:16px;}
+  }
+  .card{
+    background:#FFFDFA;
+    border-radius:18px;
+    padding:22px 18px;
+    box-shadow:0 2px 0 rgba(15,110,86,0.06);
+    border:1px solid #F2E5D3;
+  }
+  @media (min-width:600px){
+    .card{padding:28px 26px; border-radius:20px;}
+  }
+  /* PRACTICAL LIST */
+  .practical-list{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+    display:grid;
+    gap:14px;
+  }
+  .practical-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    font-size:15.5px;
+  }
+  .practical-list .ic{
+    flex:0 0 auto;
+    font-size:18px;
+    line-height:1.5;
+  }
+  .practical-list strong{color:var(--teal-deep);}
+  /* CTA BUTTON */
+  .cta{
+    display:block;
+    background:var(--cta-color);
+    color:#fff !important;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:999px;
+    box-shadow:0 4px 0 #A9740F;
+    transition:transform .12s ease;
+    text-align:center;
+  }
+  @media (min-width:600px){
+    .cta{display:inline-block;}
+  }
+  .cta:hover{transform:translateY(-1px);}
+  .cta-wrap{text-align:center; margin-top:8px;}
+  .cta-note{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:10px;
+  }
+  /* THEMES */
+  .theme-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  @media (min-width:560px){
+    .theme-grid{grid-template-columns:1fr 1fr;}
+  }
+  .theme-card{
+    background:var(--cream-2);
+    border-radius:18px;
+    padding:22px 22px;
+    margin-bottom:0;
+    border-left:6px solid var(--teal-mid);
+  }
+  .theme-thumb{
+    width:100%;
+    aspect-ratio:4/3;
+    border-radius:12px;
+    margin-bottom:14px;
+    background:linear-gradient(135deg, #F6C9AE 0%, #BFE3DD 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .theme-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .theme-thumb span{
+    font-size:30px;
+    opacity:.7;
+  }
+  .theme-card .date{
+    font-size:13px;
+    font-weight:700;
+    color:var(--teal);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  .theme-card h3{
+    font-size:18px;
+    margin:4px 0 8px;
+  }
+  .theme-card p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .theme-card em{color:var(--teal-deep); font-style:normal; font-weight:700;}
+  /* WAT IS ALOHI */
+  .about p{font-size:15.5px;}
+  .about a.site{
+    display:inline-block;
+    margin-top:10px;
+    font-weight:700;
+  }
+  /* 6 STEPS */
+  .owls-img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:8px;
+  }
+  .steps-intro{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .step{
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid #EFE6D6;
+  }
+  .step:last-child{border-bottom:none;}
+  .step-num{
+    flex:0 0 auto;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--teal-light);
+    color:var(--teal-deep);
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+  }
+  .step-thumb{
+    flex:0 0 auto;
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:var(--cream-2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .step-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .step h4{
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--title-color);
+    margin:0 0 4px;
+  }
+  .step p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  /* FOOTER */
+  footer{
+    text-align:center;
+    padding:32px 20px 48px;
+    color:var(--ink-soft);
+    font-size:13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap hero-inner">
+    <img src="assets/alohi-logo.png" alt="Alohi logo" style="width:220px; max-width:65%; height:auto; margin-bottom:16px;">
+    <h1>Een beweeg- en ontspanningsavontuur voor jouw kindje</h1>
+    <p class="lede">Hoi, ik ben Valerie, mama van Céline! Naast mijn opleiding tot kinder- en jongerentherapeut die ik momenteel volg, ben ik onlangs gecertifieerd als Alohi-trainer. Als startende Alohi-trainer organiseer ik graag een paar <strong>gratis try-out sessies</strong>, om dit in de praktijk te ervaren en waardevolle feedback te ontvangen.</p>
+  </div>
+</div>
+
+<section id="themas">
+  <div class="wrap">
+    <h2 class="section-title">Twee try-out momenten, elk met een eigen thema</h2>
+
+    <div class="theme-grid">
+      <div class="theme-card" style="border-left-color:#D3107A;">
+        <div class="theme-thumb"><img src="assets/gekkie-de-gekko.png" alt="Cover van het prentenboek Gekkie de Gekko"></div>
+        <p class="date">Zaterdag 1 augustus</p>
+        <h3>📖 "Samen sterk"</h3>
+        <p>Gebaseerd op het prentenboek <em>Gekkie de Gekko</em>. Gekkie de Gekko droomt groot. Maar op weg naar de top leert hij een verrassende les over zichzelf.</p>
+      </div>
+
+      <div class="theme-card" style="border-left-color:#F6CB25;">
+        <div class="theme-thumb"><img src="assets/de-leeuw-in-de-muis.png" alt="Cover van het prentenboek De leeuw in de muis"></div>
+        <p class="date">Zaterdag 22 augustus</p>
+        <h3>📖 "Groeien in vertrouwen"</h3>
+        <p>Gebaseerd op het prentenboek <em>De leeuw in de muis</em>. Het gaat over een onopvallende muis die opkijkt tegen de leeuw.</p>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
+    </div>
+  </div>
+</section>
+
+<section id="praktisch">
+  <div class="wrap card">
+    <h2 class="section-title">Praktisch</h2>
+    <ul class="practical-list">
+      <li><span class="ic">📅</span><span>Zaterdag <strong>1</strong> of <strong>22 augustus</strong></span></li>
+      <li><span class="ic">🕙</span><span>Aankomst om <strong>9u45</strong>, sessie van <strong>10u tot 11u30</strong></span></li>
+      <li><span class="ic">📍</span><span>Beukenlaan 83, 2980 Zoersel</span></li>
+      <li><span class="ic">👦👧</span><span>Voor kindjes van <strong>4 tot 6 jaar</strong></span></li>
+      <li><span class="ic">👥</span><span>We houden het klein: <strong>max. 6 kindjes</strong> per sessie</span></li>
+      <li><span class="ic">💶</span><span>Gratis</span></li>
+      <li><span class="ic">👕</span><span>Comfortabele kleding aandoen</span></li>
+      <li><span class="ic">📷</span><span>Er worden geen foto's of filmpjes gemaakt tijdens de sessie</span></li>
+      <li><span class="ic">✅</span><span><strong>Inschrijven is verplicht</strong></span></li>
+    </ul>
+    <div class="cta-wrap">
+      <a class="cta" href="#" target="_blank" rel="noopener">Inschrijven →</a>
+      <p class="cta-note">Plaatsen zijn beperkt tot 6 kindjes per sessie, schrijf je kind snel in.</p>
+    </div>
+  </div>
+</section>
+
+<section id="wat-is-alohi">
+  <div class="wrap card about">
+    <h2 class="section-title">Wat is Alohi?</h2>
+    <p>Alohi is een 6-stappenmethode, ontwikkeld door Els Lambrechts en Lore Coppens, die kinderen op een speelse, creatieve en lichaamsgerichte manier helpt ontspannen, verbinden en veerkrachtiger worden.</p>
+    <a class="site" href="https://www.alohi.be/" target="_blank" rel="noopener">www.alohi.be →</a>
+  </div>
+</section>
+
+<section id="stappen">
+  <div class="wrap">
+    <h2 class="section-title">De 6 stappen</h2>
+    <p class="steps-intro">Tijdens een Alohi-lesje gaan we samen op beweeg- en ontspanningsavontuur, en doorlopen we aan de hand van een thema deze 6 stappen:</p>
+
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step1-ontladen.png" alt="Alohi-mascotte bij ontladen"></div>
+      <div><h4>Ontladen</h4><p>We gaan onze energie kwijtspelen op een speelse manier. Lachen, spelen, dansen, zingen.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step2-yoga.png" alt="Alohi-mascotte bij yoga"></div>
+      <div><h4>Yoga</h4><p>Binnen de Alohi-context is kinderyoga een moment van speelsheid en verbinding, met je eigen lichaam, tussen lichaam en brein, en met elkaar.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step3-massage.png" alt="Alohi-mascotte bij massage"></div>
+      <div><h4>Massage</h4><p>Deze stap bestaat uit het masseren van je eigen lichaam (hoofd, voorkant lichaam, armen, benen) of elkaars lichaam, aan de hand van een verhaaltje.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step4-ademhaling.png" alt="Alohi-mascotte bij ademhaling"></div>
+      <div><h4>Ademhaling</h4><p>Met speelse ademhalingsoefeningetjes moedigen we kinderen aan om goed te ademen en zich bewust te worden van hun adem.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step5-mindfulness.png" alt="Alohi-mascotte bij mindfulness"></div>
+      <div><h4>Mindfulness</h4><p>We vertragen even en komen, op basis van een verhaaltje, met al onze zintuigen aanwezig in het hier en nu.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-thumb"><img src="assets/step6-babbel.png" alt="Alohi-mascotte bij het positieve babbeltje"></div>
+      <div><h4>Positief babbeltje</h4><p>We staan stil bij gevoelens en talenten, op een creatieve manier, zodat kinderen met meer vertrouwen verder kunnen.</p></div>
+    </div>
+
+    <img class="owls-img" src="assets/owls-row.png" alt="De zes Alohi-mascottes nog eens naast elkaar" style="margin-top:20px; max-width:340px; margin-left:auto; margin-right:auto;">
+  </div>
+</section>
+
+<footer>
+  Alohi try-out &middot; Valerie, mama van Céline &middot; Beukenlaan 83, 2980 Zoersel
+</footer>
+
+</body>
+</html>
